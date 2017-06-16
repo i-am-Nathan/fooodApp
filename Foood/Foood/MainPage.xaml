@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Foood"
+             x:Class="Foood.MainPage">
+    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <!--TOP STACK-->
+        <StackLayout VerticalOptions="Start">
+
+        </StackLayout>
+        <!--CENTER STACK-->
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <image x:Name="image" Aspect="AspectFit"/>
+        </StackLayout>
+        <!--END STACK-->
+        <StackLayout VerticalOptions="End" >
+            <Label x:name="foodLabel"/>
+            <Button Text="Upload Photo"
+                    Clicked="UploadButtonClicked"/>
+            <Button Text="Take Photo"
+                    Clicked="takeButtonClicked"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

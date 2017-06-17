@@ -1,0 +1,6 @@
+*.cache
+*.props
+*.flag
+*.txt
+*.xml
+*.user

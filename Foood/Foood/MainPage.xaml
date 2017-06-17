@@ -13,8 +13,8 @@
             <Image x:Name="image" Aspect="AspectFit"/>
         </StackLayout>
         <!--END STACK-->
-        <StackLayout VerticalOptions="End" >
-            <Label x:name="foodLabel"/>
+        <StackLayout VerticalOptions="End" Spacing="0" Margin="15,0,15,15">
+            <Label x:Name="foodLabel" HorizontalOptions="Center"/>
             <Button Text="Upload Photo"
                     Clicked="uploadButtonClicked"/>
             <Button Text="Take Photo"

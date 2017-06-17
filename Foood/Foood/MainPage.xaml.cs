@@ -23,8 +23,18 @@ namespace Foood
 			InitializeComponent();
 		}
 
-        private async void uploadButtonClicked(object sender, EventArgs e) { 
+        private async void uploadButtonClicked(object sender, EventArgs e)
+        { 
+            await CrossMedia.Current.Initialize();
 
+            if (!CrossMedia.Current.IsPickPhotoSupported)
+            {
+                await DisplayAlert("Pick Photo Unsupported", ":(Cannot pick photos.", "OK");
+            }
+            var photo = await CrossMedia.Current.PickPhotoAsync();
+
+            foodLabel.Text = "";
+            await MakePredictionRequest(photo);
         }
 
         private async void takeButtonClicked(object sender, EventArgs e)

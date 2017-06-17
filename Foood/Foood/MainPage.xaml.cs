@@ -33,6 +33,11 @@ namespace Foood
             }
             var photo = await CrossMedia.Current.PickPhotoAsync();
 
+            if(photo == null)
+            {
+                return;
+            }
+
             foodLabel.Text = "";
             await MakePredictionRequest(photo);
         }

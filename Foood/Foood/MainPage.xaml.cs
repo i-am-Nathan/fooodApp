@@ -17,6 +17,11 @@ namespace Foood
 			InitializeComponent();
 		}
 
+        private async void uploadButtonClicked(object sender, EventArgs e)
+        {
+
+        }
+
         private async void takeButtonClicked(object sender, EventArgs e)
         {
             await CrossMedia.Current.Initialize();
@@ -32,6 +37,11 @@ namespace Foood
 
                 //Takes photo of the business receipt
                 var file = await CrossMedia.Current.TakePhotoAsync(MediaOptions);
+
+                image.Source = ImageSource.FromStream(() =>
+                {
+                    return file.GetStream();
+                });
             }
         }
 	}

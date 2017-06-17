@@ -10,13 +10,13 @@
         </StackLayout>
         <!--CENTER STACK-->
         <StackLayout VerticalOptions="CenterAndExpand">
-            <image x:Name="image" Aspect="AspectFit"/>
+            <Image x:Name="image" Aspect="AspectFit"/>
         </StackLayout>
         <!--END STACK-->
         <StackLayout VerticalOptions="End" >
             <Label x:name="foodLabel"/>
             <Button Text="Upload Photo"
-                    Clicked="UploadButtonClicked"/>
+                    Clicked="uploadButtonClicked"/>
             <Button Text="Take Photo"
                     Clicked="takeButtonClicked"/>
         </StackLayout>
